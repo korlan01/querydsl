@@ -37,4 +37,26 @@ public class CustomerDaoTest extends AbstractDaoTest {
         assertNull(customerDao.findById(1));
     }
 
+    /*
+    *Test submitted in issue is commented out below
+    * -problem was "1L" an input was returning null pointer exception instead of incompatible type
+    * -"1L" is a quoted string
+    */
+
+    @Test
+    //
+    public void findById_string() {
+
+        assertNotNull(customerDao.findById("'1L'"));
+    }
+
+    /*
+    @Test
+    fun `unexpectedly throws NPE on incompatible type`() {
+    val num = Expressions.numberTemplate(Long::class.java, "'1L'")
+    sql.select(num)
+        .from(Expressions.stringTemplate("dual"))
+        .fetch()
+}*/
+
 }
