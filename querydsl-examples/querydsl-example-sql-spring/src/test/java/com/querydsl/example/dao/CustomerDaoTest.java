@@ -47,7 +47,7 @@ public class CustomerDaoTest extends AbstractDaoTest {
     * -"1L" is a quoted string
     */
 
-    
+    /*
     @Test
     //received correct "incompatible type" error when using findbyId of quoted string
     //testing inside of a prewritten function
@@ -62,6 +62,6 @@ public class CustomerDaoTest extends AbstractDaoTest {
         SQLQueryFactory queryFactory;
         List<Customer> customers = queryFactory.from(customerDao).select(Expressions.numberTemplate(Long.class,"'1L'")).fetch();
         assertFalse(customers.isEmpty());
-    }
+    }*/
 
 }
